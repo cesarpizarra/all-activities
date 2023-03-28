@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+main {
+  width: 100%;
+  height: 100vh;
+  background: #0b1122;
+  
+}
+header {
+  width: 100%;
+  padding: 2rem 9%;
+  color: #fff;
+}
+section {
+  width: 100%;
+  height: 100%;
+  padding: 6rem 9%;
+}
+.hero-main {
+  display: flex;
+  gap: 5%;
+}
+.hero-main .img-main img {
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.hero-main .img-main img:hover{
+    transform: scale(1.1);
+}
+.hero-main .content {
+  margin-top: 2rem;
+  color: #fff;
+}
+.hero-main .content h1 {
+  font-size: 50px;
+}
+.hero-main .content .title {
+  font-size: 23px;
+  margin-top: 4px;
+}
+.hero-main .content .button {
+  margin-top: 15px;
+}
+.hero-main .content .button button {
+  background: none;
+  border: 1px solid #fff;
+  width: 150px;
+  height: 35px;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 15px;
+}
+.hero-main .content .button button:hover{
+    background: #4d4d4d;
+    box-shadow: 0 0  15px #4d4d4d;
+}
+.hero-main .line{
+    width: 5px;
+    border-radius: 5px;
+    height: 50%;
+    background: #fff;
+}
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    transition: 0.5s;
+    animation: fadeIn 1s ease-out forwards;
+}
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.modal-content {
+    background-color: #0b1122;
+    box-shadow: 0 0 10px gray;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 20px;
+    width: 70%; 
+}
+.modal-content .choices{
+    display: flex;
+    flex-direction: column;
+}
+.modal-content summary{
+    color: #fff;
+    font-size: 20px;
+}
+.modal-content .choices a{
+    
+    font-size: 18px;
+    text-decoration: none;
+    color: #fff;
+}
+.modal-content .choices a:hover{
+    background-color: rgb(4, 164, 95);
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Media query */
+@media only screen and (max-width: 480px) {
+    section {
+        width: 100%;
+        height: 70%;
+      }
+    .hero-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-main .line{
+        width: 50%;
+        height: 3px;
+      }
+      .hero-main .img-main img {
+        width: 100%;
+        max-width: 150px;
+        border-radius: 50%;
+      }
+      .hero-main .content {
+        margin-top: 0;
+      }
+      .hero-main .content h1 {
+        font-size: 25px;
+      }
+      .modal-content {
+        background-color: #0b1122;
+        box-shadow: 0 0 10px gray;
+        margin: 50% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        border-radius: 20px;
+        width: 70%; 
+    }
+}

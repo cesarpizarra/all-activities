@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Cezaru</h1>
+      </header>
+
+      <section class="hero-main">
+        <div data-aos="flip-left" class="img-main" >
+          <img src="/img/my-img.jpg" alt="My image" />
+        </div>
+        <div class="line"></div>
+        <div data-aos="fade-down" class="content">
+          <h1>Cesar G. Pizarra</h1>
+          <div class="title">All Activities</div>
+          <div class="title">Web Programming</div>
+          <div class="button">
+            <button onclick="openModal()">View Activities</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <details>
+            <summary>Choose activities</summary>
+            <div class="choices">
+              <a href="./activities/activity1-subjects.html">Activity 1</a>
+              <a href="./activities/activity2-subAndsup.html">Activity 2</a>
+              <a href="./activities/activity3-tables.html">Activity 3</a>
+              <a href="./activities/activity4-table.html">Activity 4</a>
+              <a href="./activities/activity6-facebook.html">Activity 6</a>
+              <a href="./activities/activity7-ccs-bldg.html">Activity 7</a>
+            </div>
+          </details>
+        </div>
+      </div>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

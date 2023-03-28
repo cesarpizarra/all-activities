@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CCS BUILDING</title>
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #b0e0e6;
+}
+.main-container {
+  width: 100%;
+  height: 100vh;
+  padding: 30px 30px;
+}
+.box-container {
+  background: #ffffe0;
+  box-shadow: 1px 2px 10px 1px #333;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.box-container .line{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.box-container .line .line-content{
+    width: 3px;
+    height: 112px;
+    background: gray;
+}
+.box-container .right-main{
+  position: absolute;
+  width: 200px;
+  height: 430px;
+  bottom: 0;
+  background: #ae7d67;;
+  right: -14%;
+  
+}
+.first-line {
+  position: absolute;
+  height: 22px;
+  width: 1500px;
+  left: -25px;
+  top: 20%;
+  background: #ffffe0;
+  box-shadow: 2px 2px 9px 1px #333;
+}
+.first-line .room1{
+  position: absolute;
+  width: 250px;
+  height: 110px;
+  box-shadow: 1px 1px 5px 1px #333;
+  left: 25px;
+  top: 30px;
+}
+.first-line .room7{
+  position: absolute;
+  width: 250px;
+  height: 110px;
+  box-shadow: 1px 1px 5px 1px #333;
+  left: 70%;
+  top: 30px;
+  z-index: 0;
+}
+.first-line .room2{
+  position: absolute;
+  width: 250px;
+  height: 110px;
+  box-shadow: 1px 1px 5px 1px #333;
+  left: 27%;
+  top: 30px;
+}
+.first-line .room1 .door,
+.first-line .room2 .door,
+.first-line .room7 .door{
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    top: 20px;
+    left: 5px;
+    background-color: rgb(174, 174, 174); 
+}
+.first-line .room1 .door .door-knob,
+.first-line .room2 .door .door-knob,
+.first-line .room7 .door .door-knob{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 40px;
+    border-radius: 50%;
+    background: #222;
+}
+.first-line .room1 .window,
+.first-line .room2 .window,
+.first-line .room7 .window{
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    top: 20px;
+    left: 80px;
+    background:rgb(174, 174, 174);
+}
+.second-line {
+  position: absolute;
+  height: 20px;
+  width: 1350px;
+  left: -25px;
+  top: 45%;
+  background: #ffffe0;
+  box-shadow: 2px 2px 9px 1px #333;
+}
+.second-line .room3{
+    position: absolute;
+    width: 250px;
+    height: 110px;
+    box-shadow: 1px 1px 5px 1px #333;
+    top: 25px;
+    left: 25px;
+  }
+  .second-line .room4{
+    position: absolute;
+    width: 250px;
+    height: 110px;
+    box-shadow: 1px 1px 5px 1px #333;
+    top: 25px;
+    left: 30%;
+  }
+  .second-line .room8{
+    position: absolute;
+    width: 250px;
+    height: 110px;
+    box-shadow: 1px 1px 5px 1px #333;
+    top: 25px;
+    left: 78%;
+  }
+  .second-line .room3 .door,
+  .second-line .room4 .door,
+  .second-line .room8 .door{
+      position: absolute;
+      width: 60px;
+      height: 80px;
+      top: 20px;
+      left: 5px;
+      background-color: rgb(174, 174, 174); 
+  }
+  
+  .second-line .room3 .door .door-knob,
+  .second-line .room4 .door .door-knob,
+  .second-line .room8 .door .door-knob{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 40px;
+      border-radius: 50%;
+      background: #222;
+  }
+  .second-line .room3 .window,
+  .second-line .room4 .window,
+  .second-line .room8 .window{
+      position: absolute;
+      width: 120px;
+      height: 40px;
+      top: 20px;
+      left: 80px;
+      background:rgb(174, 174, 174);
+  }
+.third-line {
+  position: absolute;
+  height: 20px;
+  width: 1350px;
+  left: -25px;;
+  top: 65%;
+  background: #ffffe0;
+  box-shadow: 2px 2px 9px 1px #333;
+}
+.third-line .room5{
+    position: absolute;
+    width: 250px;
+    height: 110px;
+    box-shadow: 1px 1px 5px 1px #333;
+    left: 25px;
+    top: 30px;
+  }
+  .third-line .room6{
+    position: absolute;
+    width: 250px;
+    height: 110px;
+    box-shadow: 1px 1px 5px 1px #333;
+    left: 30%;
+    top: 30px;
+  }
+  .third-line .room9{
+    position: absolute;
+    width: 250px;
+    height: 110px;
+    box-shadow: 1px 1px 5px 1px #333;
+    left: 78%;
+    top: 30px;
+  }
+  .third-line .room5 .door,
+  .third-line .room6 .door,
+  .third-line .room9 .door{
+      position: absolute;
+      width: 60px;
+      height: 80px;
+      top: 20px;
+      left: 5px;
+      background-color: rgb(174, 174, 174); 
+  }
+  
+  .third-line .room5 .door .door-knob,
+  .third-line .room6 .door .door-knob,
+  .third-line .room9 .door .door-knob{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      top: 40px;
+      border-radius: 50%;
+      background: #222;
+  }
+  .third-line .room5 .window,
+  .third-line .room6 .window,
+  .third-line .room9 .window{
+      position: absolute;
+      width: 120px;
+      height: 40px;
+      top: 20px;
+      left: 80px;
+      background:rgb(174, 174, 174);
+  }
+.main {
+  position: absolute;
+  width: 280px;
+  height: 103%;
+  bottom: 0;
+  background: #ffffe0;
+  box-shadow: 1px 1px 10px 1px #333;
+  right: 25%;
+}
+.main .grid-container {
+    display: grid;
+    margin: 30px 30px 0 30px;
+    grid-template-columns: repeat(3, 1fr);
+  
+  }
+  .main .grid-item {
+    background-color: rgb(174, 174, 174);
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+  }
+  .main .logo-image{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+  }
+  .main .logo-image img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  .main .logo-image .text h1{
+    font-size: 15px;
+    text-align: center;
+    font-family: arial;
+    text-transform: uppercase;
+  }
+.main .entrance {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 0;
+  left: 50px;
+  background: #333;
+  box-shadow: inset 1px 1px 10px 0px rgba(66, 68, 90, 1);
+  box-shadow: inset 1px 1px 10px 0px rgba(66, 68, 90, 1);
+  box-shadow: inset 1px 1px 10px 0px rgba(66, 68, 90, 1);
+}
+.ladder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rung {
+  height: 20px;
+  width: 200px;
+  background-color: rgb(174, 174, 174);
+  box-shadow: 0px 0px 10px rgba(188, 171, 171, 0.3);
+  margin-bottom: 20px;
+  border-radius: 1px;
+}
+.rung:last-child {
+  margin-bottom: 0;
+}
+
+
+.main .left-side {
+  position: absolute;
+  bottom: 0;
+  width: 50px;
+  height: 200px;
+  background: #ae7d67;
+}
+.main .right-side {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  height: 200px;
+  background: #ae7d67;
+}
+.left-down {
+  position: absolute;
+  width: 650px;
+  bottom: 0;
+  height: 80px;
+  background-color: #ffffe0;
+  box-shadow: 2px 1px 7px 1px #333;
+}
+.left-down .holder{
+  width: 262px;
+  height: 2px;
+  background: gray;
+  position: absolute;
+  bottom: 40px;
+  right: 0;
+}
+.left-down .rail-way{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 50%;
+  margin-top: 40px;;
+}
+.left-down .rail-way .rail{
+  width: 2px;
+  height: 40px;
+  background: gray;
+}
+.right-down {
+  position: absolute;
+  width: 320px;
+  bottom: 0;
+  right: 0;
+  height: 80px;
+  background-color: #ffffe0;
+  box-shadow: 2px 1px 7px 1px #333;
+}
+
+</style>
+<body>
+    <div class="main-container">
+        <div class="box-container">
+            <div class="line">
+                <div class="line-content"></div>
+                <div class="line-content"></div>
+                <div class="line-content"></div>
+                <div class="line-content"></div>
+                <div class="line-content"></div>
+                <div class="line-content"></div>
+                <div class="line-content"></div>
+            </div>
+           <div class="first-line">
+            <div class="room1">
+                <div class="door">
+                    <div class="door-knob"></div>
+                </div>
+                <div class="window"></div>
+            </div>
+            <div class="room2">
+                <div class="door">
+                    <div class="door-knob"></div>
+                </div>
+                <div class="window"></div>
+            </div>
+            <div class="room7">
+                <div class="door">
+                    <div class="door-knob"></div>
+                </div>
+                <div class="window"></div>
+            </div>
+           
+           </div>
+           <div class="second-line">
+            <div class="room3">
+                <div class="door">
+                    <div class="door-knob"></div>
+                </div>
+                <div class="window"></div>
+            </div>
+            <div class="room4">
+                <div class="door">
+                    <div class="door-knob"></div>
+                </div>
+                <div class="window"></div>
+            </div>
+            <div class="room8">
+                <div class="door">
+                    <div class="door-knob"></div>
+                </div>
+                <div class="window"></div>
+            </div>
+           </div>
+           <div class="third-line">
+            <div class="room5">
+                <div class="door">
+                    <div class="door-knob"></div>
+                </div>
+                <div class="window"></div>
+            </div>
+            <div class="room6">
+                <div class="door">
+                    <div class="door-knob"></div>
+                </div>
+                <div class="window"></div>
+            </div>
+            <div class="room9">
+                <div class="door">
+                    <div class="door-knob"></div>
+                </div>
+                <div class="window"></div>
+            </div>
+           </div>
+           <div class="main">
+            <div class="grid-container">
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+                <div class="grid-item"></div>
+              </div>
+              <div class="logo-image">
+                <div class="logo-dmmmsu">
+                    <img src="../assets/dmmmsulogo.png" alt="">
+                </div>
+                <div class="text">
+                    <h1>College <br>of <br> Computer Science </h1>
+                </div>
+                <div class="logo-ccs">
+                    <img src="../assets/ccslogo.png" alt="">
+                </div>
+              </div>
+            <div class="left-side"></div>
+            <div class="entrance">
+                <div class="ladder">
+                    <div class="rung"></div>
+                    <div class="rung"></div>
+                    <div class="rung"></div>
+                    <div class="rung"></div>
+                    <div class="rung"></div>
+                  </div>
+                  
+            </div>
+            <div class="right-side"></div>
+           </div>
+           <div class="left-down">
+            <div class="rail-way">
+                <div class="rail"></div>
+                <div class="rail"></div>
+                <div class="rail"></div>
+                <div class="rail"></div>
+            </div>
+            <div class="holder"></div>
+           </div>
+           <div class="right-down"></div>
+           <div class="right-main"></div>
+        </div>
+    </div>
+</body>
+</html>
